@@ -1,4 +1,3 @@
-#Embedded file name: SARpytools.pyc
 from __future__ import division
 import operator
 from string import digits, letters
@@ -12,23 +11,9 @@ WildCard = '[*]'
 Asterisk = '*'
 WildCards = [Break, WildCard, Asterisk]
 TwoCharsElements = ['Br', 'Cl']
-OneCharElements = ['B',
- 'C',
- 'N',
- 'O',
- 'P',
- 'S',
- 'F',
- 'I']
-AromaticElements = ['c',
- 'n',
- 'o',
- 's',
- 'p']
-Bonds = ['-',
- '=',
- '#',
- ':']
+OneCharElements = ['B', 'C', 'N', 'O', 'P', 'S', 'F', 'I']
+AromaticElements = ['c', 'n', 'o', 's', 'p']
+Bonds = ['-', '=', '#', ':']
 SplittingChars = OneCharElements + [ e[0] for e in TwoCharsElements ] + AromaticElements
 
 class Grinder:
@@ -162,7 +147,6 @@ class Converter:
 
 class Structure:
     _converter = Converter()
-
     def __init__(self, mol):
         self.mol = mol
         self.smiles = Structure._converter.getSmiles(self.mol)
@@ -304,8 +288,7 @@ class Filter:
                 if not cond(molData):
                     return False
             except:
-                return False
-
+                    return False
         return True
 
 

@@ -1,4 +1,3 @@
-#Embedded file name: SARpy.pyc
 from __future__ import division
 import operator
 from math import log
